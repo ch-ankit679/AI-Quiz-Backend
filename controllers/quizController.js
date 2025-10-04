@@ -20,7 +20,7 @@ Format output strictly as JSON:
 ]
 `;
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-oss-20b:free",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7, // balanced speed + variety
     });
@@ -49,7 +49,7 @@ Write a short, friendly, motivating feedback message (1 to 2 sentences).
 `;
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-oss-20b:free",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
     });
